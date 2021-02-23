@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Sports "R" Us</title>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+	<link rel="stylesheet" href="style.css">
+
+</head>
+
+        
+<div class="header">
+	<a href="#default" class="logo">Sports "R" Us</a>
+	<div class="header-right">
+	  <a href="index.html">Home</a>
+	  <a class="active" href="contact.html">Contact</a>
+	  <a href="services.html">Services</a>
+	</div>
+  </div>	
+
+<style type = "text/css">
+	body {background-color: #b3d48d;}
+	.flex-container {display: flex; justify-content: space-around; margin: 1em;}
+</style>
+
+<body>
+	<div>
+		<div>
+			<h1 style="box-sizing: border-box; background-color: #9b92b1; border-radius:2px">Contact</h1>
+			<div style="background-color:#D5E2EF; border-radius:2px; color: #7b68b8; 
+			padding: 0.5em; size:15px">
+				<span><b>PHONE:</b><br> (555)-555-5555</span><br><br>
+				<span><b>EMAIL:</b><br> help@SportsRUs.com</span><br><br>
+				<span><b>ADDRESS:</b><br> 1600 Pennsylvania Ave NW <br>Washington, DC 20500</span>
+			</div>
+	</div>
+
+	<hr>
+
+	<div>
+		<section>
+            <h2>Have an area you'd like to see us at? Submit a form here!</h2>
+			<form name="input" method="POST">
+				Name: <input type="text" name="name" placeholder="Your name"></input>
+				<br>
+				Email: <input type="email" name="user email" placeholder="Your email"></input>
+				<br>
+                Location: <input type="text" name="name" placeholder="Location"></input>
+				<br>
+                <br><br>
+				Reason: <textarea name="message" placeholder="Why here?"/></textarea>
+				<br>
+				<input type="submit" value="Send Message"></input>
+				<input type="hidden" name="_subject" value="Someone Messaged You!"></input>
+				<input type="hidden" name="_next" value="thanks.html"></input>
+			</form>
+		</section>
+	</div>		
+</body>
+<footer>
+	Company © Sports "R" Us. All rights reserved.
+</footer>
+</html>
