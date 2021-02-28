@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset ="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+        <link rel="stylesheet" href="style.css">
+        <title>Joe's Hot Dogs</title>
+        <script language = "javascript">
+            function getNumberOfStuff() {
+                var dogs = prompt("How many hot dogs do you want? ($3.25)", 0);
+                var num_dogs = parseInt(dogs);
+
+                var fry = prompt("How many orders of french fries do you want? ($2.00)", 0);
+                var num_fry = parseInt(fry);
+
+                var drinks = prompt("How many orders of drinks do you want? ($1.50)", 0);
+                var num_drinks = parseInt(drinks);
+
+
+
+                document.getElementById("num_hotdogs").innerHTML = "Number of hotdogs: " + num_dogs;
+                document.getElementById("num_fries").innerHTML = "Number of fries: " +  num_fry;
+                document.getElementById("num_drinks").innerHTML = "Number of drinks: " + num_drinks;
+                document.getElementById("price_hotdogs").innerHTML = "$" + (num_dogs * 3.25).toFixed(2);
+                document.getElementById("price_fries").innerHTML = "$" + (num_fry * 2.00).toFixed(2);
+                document.getElementById("price_drinks").innerHTML = "$" + (num_drinks * 1.50).toFixed(2);
+
+
+                var subtotal = (num_dogs * 3.25) + (num_fry * 2.00) + (num_drinks * 1.50);
+                document.getElementById("subtotal").innerHTML = "$" + subtotal.toFixed(2);
+                document.getElementById("before_tax").innerHTML = "Subtotal: "
+            
+
+
+                var discount = 0;
+                if (subtotal >= 20) {
+                    document.getElementById("discountmessage").innerHTML = "10% off for orders of $20 or more!";
+                    discount =  0.1 * subtotal;
+                    document.getElementById("discount").innerHTML = "- 10%";
+                    document.getElementById("deduction").innerHTML = "- $" + discount.toFixed(2);
+                }
+                else {
+                    document.getElementById("discountmessage").innerHTML = "No Discount";
+                    document.getElementById("discount").innerHTML = "0%";
+                    document.getElementById("deduction").innerHTML = "- $0.00";
+                }
+                
+
+
+                subtotal = subtotal - discount;
+                var tax = .0625 * subtotal;
+                
+                document.getElementById("tax_message").innerHTML = "Tax: ";
+
+                document.getElementById("tax_pct").innerHTML = "6.25%";
+                document.getElementById("tax_cost").innerHTML = "+ $" + tax.toFixed(2);
+                var total = subtotal + tax;
+
+                document.getElementById("total").innerHTML = "$" + total.toFixed(2);
+
+                document.getElementById("total_message").innerHTML = "Total: ";
+
+                document.getElementById("h_line1").innerHTML = "<hr style=border-color:#111111; height: 1px;>";
+                document.getElementById("h_line2").innerHTML = "<hr style=border-color:#111111; height: 1px;>";
+                document.getElementById("h_line3").innerHTML = "<hr style=border-color:#111111; height: 1px;>";
+                
+                document.getElementById("h_line4").innerHTML = "<hr style=border-color:#111111; height: 1px;>";
+                document.getElementById("h_line5").innerHTML = "<hr style=border-color:#111111; height: 1px;>";
+                document.getElementById("h_line6").innerHTML = "<hr style=border-color:#111111; height: 1px;>";
+            }
+            
+
+
+        </script>
+        <h1>&nbsp; Welcome to Joe's Hot Dog Stand! </h1>
+
+    </head>
+
+    <body class="text-background">
+        <div class = "wrap">
+            <div class="left_col">
+                <p>Hot Dog Price: </p>
+                <p>Fries Price: </p>
+                <p>Drink Price: </p>
+
+                <p id="h_line1"></p>
+                
+                <p id ="num_hotdogs"></p>
+                <p id ="num_fries"></p>
+                <p id ="num_drinks"></p>
+                <p id ="before_tax"></p>
+
+                <p id="h_line2"></p>
+
+                <p id ="discountmessage"></p>
+                <p><br></p>
+                <p><br></p>
+                <p id="tax_message"></p>
+                
+                <p id="h_line3"></p>
+
+                <p id="total_message"></p>
+            </div>
+
+            <div class="right_col">
+                <p>$3.25</p>
+                <p>$2.00</p>
+                <p>$1.50</p>
+
+                <p id="h_line4"></p>
+
+                <p id="price_hotdogs"></p>
+                <p id="price_fries"></p>
+                <p id="price_drinks"></p>
+                <p id="subtotal"></p>
+
+                <p id="h_line5"></p>
+
+                <p id="discount"></p>
+                <p id="deduction"></p>
+                <p id="tax_pct"></p>
+                <p id="tax_cost"></p>
+
+                <p id="h_line6"></p>
+
+                <p id="total"></p>
+            </div>
+        </div>
+
+
+
+
+
+
+
+
+    </body>
+    <footer>
+        <input name="Input" type="button" value="Order Here!" class = "square-button" onclick="getNumberOfStuff()"/>
+    </footer>
+</html>
+
+
