@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/css" href="style.css"?> 
+
+<SongList>
+    <heading>GREEN DAY WORLD TOUR</heading>
+
+    <body>
+        <Dookie>
+            <Record>1. Basket Case </Record>
+            <duration>[3:01]</duration>
+            <artist>Artist(s): Green Day</artist>
+            <album>Album: Dookie</album>
+            <genre>Genre: Rock</genre>
+            <year>Year: 1994</year>
+        </Dookie>
+    
+        <Idiot>
+            <Record>2. Boulevard of Broken Dreams </Record>
+            <duration>[4:26]</duration>
+            <artist>Artist(s): Green Day</artist>
+            <album>Album: American Idiot</album>
+            <genre>Genre: Alternative/Indie</genre>
+            <year>Year: 2004</year>
+        </Idiot>
+
+        <Idiot>
+            <Record>3. Wake Me up When September Ends </Record>
+            <duration>[4:45]</duration>
+            <artist>Artist(s): Green Day</artist>
+            <album>Album: American Idiot</album>
+            <genre>Genre: Alternative/Indie</genre>
+            <year>Year: 2004</year>
+        </Idiot>
+
+        <Nimrod>
+            <Record>4. Good Riddance (Time of Your Life) </Record>
+            <duration>[2:33]</duration>
+            <artist>Artist(s): Green Day</artist>
+            <album>Album: Nimrod</album>
+            <genre>Genre: Alternative/Indie</genre>
+            <year>Year: 1994</year>
+        </Nimrod>
+
+        <Dookie>
+            <Record>5. Welcome to paradise </Record>
+            <duration>[3:44]</duration>
+            <artist>Artist(s): Green Day</artist>
+            <album>Album: Dookie</album>
+            <genre>Genre: Rock</genre>
+            <year>Year: 1994</year>
+        </Dookie>
+
+        <Dookie>
+            <Record>6. When I Come Around </Record>
+            <duration>[2:57]</duration>
+            <artist>Artist(s): Green Day</artist>
+            <album>Album: Dookie</album>
+            <genre>Genre: Alternative/Indie</genre>
+            <year>Year: 1994</year>
+        </Dookie>
+
+        <Century>
+            <Record>7. 21 Guns </Record>
+            <duration>[5:21]</duration>
+            <artist>Artist(s): Green Day</artist>
+            <album>Album: 21st Century Breakdown</album>
+            <genre>Genre: Alternative/Indie</genre>
+            <year>Year: 2009</year>
+        </Century>
+
+        <Dookie>
+            <Record>8. Longview </Record>
+            <duration>[3:53]</duration>
+            <artist>Artist(s): Green Day</artist>
+            <album>Album: Dookie</album>
+            <genre>Genre: Alternative/Indie/Rock</genre>
+            <year>Year: 1994</year>
+        </Dookie>
+
+        <Idiot>
+            <Record>9. Holiday </Record>
+            <duration>[3:55]</duration>
+            <artist>Artist(s): Green Day</artist>
+            <album>Album: American Idiot</album>
+            <genre>Genre: Alternative/Indie</genre>
+            <year>Year: 2004</year>
+        </Idiot>
+
+        <NewRelease>
+            <Record>10. Into the Fire </Record>
+            <duration>[3:55]</duration>
+            <artist>Artist(s): Green Day feat. Kanye West</artist>
+            <album>Album: (Single)</album>
+            <genre>Genre: native/Indie</genre>
+            <year>Year: 2021</year>
+        </NewRelease>
+    </body>
+</SongList>

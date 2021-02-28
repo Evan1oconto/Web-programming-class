@@ -1,0 +1,47 @@
+@import url('https://fonts.googleapis.com/css2?family=Stick&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100&display=swap');
+
+SongList { 
+    color: black; 
+    width: 100%; 
+    margin: 1em;
+    background-color: #A9B9C9;
+} 
+Idiot {
+    background-color: #f3533b;
+}
+Dookie {
+    background-color: #a08f6b;
+}
+Nimrod {
+    background-color: #cebe67;
+}
+Century {
+    background-color: #aa6868;
+}
+NewRelease {
+    background-color: #ced659;
+}
+heading { 
+    color: rgb(12, 117, 29); 
+    font-size : 28px; 
+    font-family: 'Stick', sans-serif;
+    background-color : #5cc8e9; 
+} 
+body {
+    background-color: #d3a294;
+    height: 100%;
+    font-size : 20px; 
+    font-family: 'Didot', serif;
+    box-sizing: border-box;
+}
+heading, artist, album, genre, year { 
+    display : block; 
+} 
+name { 
+    font-size : 18px; 
+    font-weight : bold; 
+} 
+duration {
+    font-size: 16px;
+}
