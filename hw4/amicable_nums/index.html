@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="main.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+        font-family: 'Barlo', sans-serif;
+        color: rgb(11, 4, 73);
+        font-size: 24px;
+        background:  #c2a0c2;
+        }
+    </style>
+
+  </head>
+
+
+        <script>
+            function isFactor(num, numtest)
+            {
+                rem = num % numtest;
+                if(rem == 0){
+                    return true;
+                } else {
+                    return false;
+                }
+            }
+
+
+            function addFactors(factors)
+            {
+                sum = 0;
+                for(i = 0; i < factors.length; i++){
+                    sum = sum + factors[i];
+                }
+                //document.write("<br>Sum of Factors: " + sum);
+                return sum;
+            }
+
+
+            function validate(num, factors)
+            {
+                found = 0;
+                for(i = 0; i < factors.length; i++){
+                    if(factors[i] == num){
+                        return (found + 1);
+                    }
+                }
+                return found;
+            }
+
+
+            function getFactors(num)
+            {
+                curr = 1;
+                factorsArr = new Array;
+                factorsArr.push(1);
+                curr++;
+
+                while(validate(curr, factorsArr) == 0 && curr < num){
+                    // start here
+                    if(isFactor(num, curr)==true){
+                        factorsArr.push(curr);
+                        otherVal = num/curr;
+                        factorsArr.push(otherVal);
+                    }
+                    curr++;
+                }
+
+                return factorsArr;
+            }
+
+
+            function areAmicable()
+            {
+                firstNum = document.getElementById("num1").value;
+                secondNum = document.getElementById("num2").value;
+                //document.write("<br>For Number 1: " + firstNum);
+                factNum1 = getFactors(firstNum);
+                //showFactors(factNum1);
+                sum1 = addFactors(factNum1);
+
+                //document.write("<br><br>");
+
+                //document.write("<br>For Number 2: " + secondNum);
+                factNum2 = getFactors(secondNum);
+                //showFactors(factNum2);
+                sum2 = addFactors(factNum2);
+
+                //document.write("<br><br>");
+
+                if(sum1 == secondNum && sum2 == firstNum){
+                    
+                    document.getElementById('placehold').innerHTML= "The numbers are Amicable!";
+                } else {
+                    
+                    document.getElementById('placehold').innerHTML = "The numbers are not Amicable. :(";
+                }
+
+
+            }
+
+            function printfactorsandsum() {
+                firstNum = document.getElementById("num1").value;
+                secondNum = document.getElementById("num2").value;
+                var printable = "";
+
+                factNum1 = getFactors(firstNum);
+                sum1 = addFactors(factNum1);
+
+                
+                factNum2 = getFactors(secondNum);
+                sum2 = addFactors(factNum2);
+                
+                printable += "Here is the first number's factors: ";
+                for (i = 0; i < factNum1.length; i++) {
+                    printable += factNum1[i] + " ";
+                }
+
+                printable += "</br>Here is the second number's factors: ";
+                for (i = 0; i < factNum2.length; i++) {
+                    printable += factNum2[i] + " ";
+                }
+                printable += "<br />Here is the first sum: " + sum1;
+                
+                printable += "<br />Here is the second sum: " + sum2;
+
+                document.getElementById('factors').innerHTML = printable;
+            }
+
+            function myFunction() {
+
+                var popup = document.getElementById("myPopup");
+                popup.classList.toggle("show");
+            }
+
+            
+        </script>
+      <body>
+        <form name="amicable_nums">
+            
+            Number 1 <input type="text" name="num1" id="num1">
+            <br />
+            <br />
+            Number 2 <input type="text" name="num2" id="num2">
+            <br />
+            <br />
+        </form>            
+        <input type="button" value = "Check if Amicable" onclick ="areAmicable()">
+        <div id = "placehold"><br /></div>
+        
+        <div id = "factors"> 
+            <p>Click here to show the factors:</p>
+        </div>
+        <input type="button" value = "Check factors" onclick ="printfactorsandsum()">
+        
+    </body>
+</html>
