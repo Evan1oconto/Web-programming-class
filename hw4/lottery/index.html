@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="main.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  </head>
+  <body style="text-align: center;">
+  <form id="lottery" style="text-align: left;">
+
+    <h1>Mass Lottery</h1>
+
+    
+    <script>
+
+        var numbers = new Array();
+        var numbers_length = 5;
+        var rand_number, upper_limit;
+
+        for (i = 0; i < numbers_length; i++) {
+          rand_number = Math.floor(Math.random() * 47) + 1;
+          numbers.push(rand_number);
+        }
+
+        var lucky_ball = Math.floor(Math.random() * 17) + 1;
+
+        var lotto_nums = prompt("Enter the 5 lottery numbers", "");
+        var data = lotto_nums.split(" ");
+
+        var ball_num = prompt("Enter the lucky ball numbers", "");
+        lucky = parseInt(ball_num);
+
+        document.write("Here are the winning lottery numbers: <br />");
+        for (i = 0; i < numbers.length; i++) {
+          document.write(numbers[i] + "    ");
+        }
+        document.write("and lucky: " + lucky_ball + "<br />");
+        
+        document.write("Here are your numbers: <br />");
+
+        for (i = 0; i < numbers.length; i++) {
+          document.write(data[i] + "    ");
+        }
+
+        document.write("and lucky: " + lucky + "<br />");
+
+
+        var score = 0;
+
+        for (i = 0; i < numbers.length; i++) {
+          for (j = 0; j < data.length; j++) {
+            if (data[j] == numbers[i]) {
+              score += 1;
+              break;
+            }
+          }
+        }
+          if (lucky == lucky_ball)
+            score += 0.5;
+          switch(score)
+          {
+            case 0.5: 
+              console.log("lucky ball");
+              document.write("Match: 0 + Lucky Ball: <br />");
+              document.write("Payout: $4");
+              break;
+            case 1.5: 
+              document.write("Match: 1 + Lucky Ball: <br />");
+              document.write("Payout: $6");
+              break;
+            case 2: 
+              document.write("Match: 2: <br />");
+              document.write("Payout: $3");
+              break;
+            case 2.5: 
+              document.write("Match: 2 + Lucky Ball: <br />");
+              document.write("Payout: $25");
+              break;
+            case 3: 
+              document.write("Match: 3: <br />");
+              document.write("Payout: $20");
+              break;
+            case 3.5: 
+              document.write("Match: 3 + Lucky Ball: <br />");
+              document.write("Payout: $150");
+              break;
+            case 4: 
+              document.write("Match: 4: <br />");
+              document.write("Payout: $200");
+              break;
+            case 4.5: 
+              document.write("Match: 4 + Lucky Ball: <br />");
+              document.write("Payout: $5,000");
+              break;
+            case 5: 
+              document.write("Match: 5: <br />");
+              document.write("Payout: $25,000 a YEAR for LIFE!");
+              break;
+            case 5.5: 
+              document.write("Match: 5 + Lucky Ball: <br />");
+              document.write("Payout: $7,000 a WEEK for LIFE!");
+              break;
+            default: 
+              console.log("default");
+              document.write("Sorry. You did not win a prize.");
+              break;
+          }
+      </script>
+    </body>
+</html>
+
