@@ -1,0 +1,62 @@
+[
+    {
+        "song_name" : "Money Longer",
+        "artist" : "Lil Uzi Vert",
+        "genre" : ["Hip Hop"],
+        "year" : "2016"
+    },
+    {
+        "song_name" : "No Heart",
+        "artist" : "21 Savage",
+        "genre" : ["Hip Hop"],
+        "year" : "2016"
+    },
+    {
+        "song_name" : "Trap Queen",
+        "artist" : "Fetty Wap",
+        "genre" : ["Hip Hop"],
+        "year" : "2014"
+    },
+    {
+        "song_name": "I",
+        "artist" : "Lil Skies",
+        "genre" : ["Hip Hop"],
+        "year" : "2019"
+    },
+    {
+        "song_name" : "Starboy",
+        "artist" : "The Weeknd",
+        "genre" : ["Pop"],
+        "year" : "2016"       
+    },
+    {
+        "song_name" : "Die For You",
+        "artist" : "The Weeknd",
+        "genre" : ["R&B"],
+        "year" : "2016"
+    },
+    {
+        "song_name" : "The Matrix",
+        "artist" :"Bassnectar",
+        "genre" : ["EDM"],
+        "year" : "2011"
+    },
+    {
+        "song_name" : "Losing It",
+        "artist": "Fisher",
+        "genre" :["EDM"],
+        "year" : "2018"
+    },
+    {
+        "song_name" : "Coffee",
+        "artist" :"Quinn XCII",
+        "genre" : ["Alternative"],
+        "year" : "2020"
+    },
+    {
+        "song_name" : "Stressed Out",
+        "artist" : "Twenty One Pilots",
+        "genre" : ["Alternative"],
+        "year" : "2015"
+    }
+]
