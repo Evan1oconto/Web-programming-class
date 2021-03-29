@@ -1,0 +1,75 @@
+<!doctype html>
+<html>
+<head>
+	<title>API Fun</title>
+	<meta charset="utf-8"/>
+
+    <h1>API Fun</h1>
+    <style>
+        body {
+            margin: 10px;
+            padding: 0 25%;
+            background-color: #bcccee;
+        }
+        input {
+            font-family: Arial, Verdana, sans-serif;
+        }
+        a {
+            color: #ce8177;
+            text-decoration: none;
+        }
+
+    </style>
+
+
+
+</head>
+
+<body>
+
+	<h2>Dictionary</h2>
+
+	<form>What word would you like the definition to? <input type = 'text' name = 'word'>
+		<br><input type = "button" value = "Get Definition" onclick="load()">
+	</form>
+
+
+	<div id="definition">&nbsp;</div>
+	<p> I wanted to create a dictionary based website, so I found this API 
+        from <a href="https://www.wordsapi.com">https://www.wordsapi.com</a> and created this. 
+        What this website is is it allows a user to search up the definition of
+        a word. This is done since I only included the definition option; I could
+        have gotten more information such as synonyms, rhymes, antonyms, etc. 
+        This could be useful as a dictionary app, or it could be a useful add 
+        on for the likes of an app, like words with friends or a kindle app.
+        This is because the app allows for a user to quickly look up a definition
+        and a tool like this could provide quick feedback. </p>
+
+
+	<script language="javascript">
+		function load() {
+			
+			data = null;
+			request = new XMLHttpRequest();
+			request.withCredentials = true;
+ 			word = document.forms[0].word.value;
+
+
+            request.open("GET", "https://wordsapiv1.p.rapidapi.com/words/"+word+"/definitions", true);
+			request.setRequestHeader("x-rapidapi-key", "e928c7248emshdd8d4c8475eb120p1d988ejsn19db51ff6b33");
+			request.setRequestHeader("x-rapidapi-host", "wordsapiv1.p.rapidapi.com");
+
+
+			request.addEventListener("readystatechange", function () {
+				if (this.readyState == this.DONE) {
+					response = request.responseText;
+					document.getElementById("definition").innerHTML = "<br><br>The definition is: <br>" + response;
+				}
+			});
+			request.send(data);
+		}
+	</script>
+
+
+</body>
+</html>
