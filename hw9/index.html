@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>SongList With JSON</title>
+        <meta charset="utf-8"/>
+        
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+        <h1>Song List</h1>
+
+        <style> 
+            body {
+                margin: 10px;
+                padding: 0 25%;
+                background-color: #cfbcee;
+                font-family: 'Times New Roman', Times, serif;
+            }
+        </style>
+    </head>
+
+
+<body>
+    <form>
+        <select name="display_genre" id="display_genre">
+            <option value="display_all" name="display_all">Display All</option>
+            <option value="Hip Hop" name="Hip Hop">Hip Hop</option>
+            <option value="R&B" name="R&B">R&B</option>
+            <option value="EDM" name="EDM">EDM</option>
+            <option value="Alternative" name="Alternative">Alternative</option>
+        </select>
+
+        <input type="button" value="confirm" id="button" onclick="update(display_genre.value)">
+    </form>
+
+
+
+    <div id = "SongList">
+        <p id = "rawString"></p>
+        <p id = "userFriendly"></p>
+    </div>
+
+
+    <script>
+        $.get("https://Evan1oconto.github.io/Web-programming-class/hw9/songs.json", function(song_list) { 
+            rawString = JSON.stringify(song_list);
+            document.getElementById("rawString").innerHTML = rawString + "<br>";
+
+            placeholder_string = "";
+
+            song_list.forEach(function(song) {
+                placeholder_string += song.song_name+"<br>"+song.artist+"<br>"+
+                                      song.genre+"<br>"+song.year+"<br><br><br>";
+            })
+
+            
+            document.getElementById("userFriendly").innerHTML = placeholder_string;
+        })
+
+        function update(genre) {
+			$.get("https://Evan1oconto.github.io/Web-programming-class/hw9/songs.json", function (song_list) {
+                list_info = "";
+                if (genre == "display_all") {
+                    song_list.forEach(function(song){
+                        list_info += song.song_name;
+                        list_info += "<br/>"
+                        list_info += song.artist;
+                        list_info += "<br/>";
+                        list_info += song.genre;
+                        list_info += "<br/>"
+                        list_info += song.year;
+                        list_info += "<br/><br/><br/>"
+                    })
+                }
+
+                else {
+                    song_list.forEach(function(song) {
+                        if(song.genre == genre) 
+                        {
+                            list_info += song.song_name;
+                            list_info += "<br/>"
+                            list_info += song.artist;
+                            list_info += "<br/>";
+                            list_info += song.genre;
+                            list_info += "<br/>"
+                            list_info += song.year;
+                            list_info += "<br/><br/><br/>"
+                        }
+                    })
+                }
+                document.getElementById('userFriendly').innerHTML = list_info;
+            })
+        }
+    </script>
+</body>
+</html>
