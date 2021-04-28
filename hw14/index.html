@@ -1,0 +1,41 @@
+  
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Stock Ticker</title>
+
+    </head>
+    <body>
+        <script>
+            function show_name()
+            {
+                document.getElementById('company_input').style.display = "block";
+                document.getElementById('ticker_input').style.display = "none";
+            }
+
+            function show_ticker()
+            {
+                document.getElementById('company_input').style.display = "none";
+                document.getElementById('ticker_input').style.display = "block";
+            }
+        </script>
+
+
+        <form 
+        method="post"
+        action="http://localhost:8080/process_stocks"
+        name="user_input">
+        How do you want to browse the company catalog? <br>
+
+            <input type="radio" name="selection" id="by_name" value="value1" onclick="show_name()">
+            <label for="by_name">By name (will retrieve one company)</label><br>
+            <input type="radio" name="selection" id="by_ticker" value="value2" onclick="show_ticker()">
+            <label for="by_ticker">By ticker (will retrieve all the companies sharing the same ticker)</label><br>
+
+            <input type="text" id="company_input" name="company_input" placeholder="Insert name here" style="display: none;">
+            <input type="text" id="ticker_input" name="ticker_input" placeholder="Insert ticker here" style="display: none;">
+
+            <input type="submit" value="Search!">
+        </form>
+    </body>
+</html>

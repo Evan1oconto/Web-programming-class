@@ -1,0 +1,20 @@
+{
+  "name": "stock_ticker",
+  "version": "1.0.0",
+  "description": "node app",
+  "main": "package.js",
+  "scripts": {
+  "start": "node package.js"
+},
+  "repository": {
+  "type": "git",
+  "url": ""
+},
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+  "url": ""
+},
+  "homepage": ""
+}
+
