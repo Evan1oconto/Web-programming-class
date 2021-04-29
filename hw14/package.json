@@ -16,7 +16,7 @@
   "url": ""
 },
 "dependencies": {
-  "mongodb": "^3.6.6"
+  "mongodb": "3.6.6"
 },
   "homepage": ""
 }
